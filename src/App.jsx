@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Checkbox } from "./components/forms/checkbox";
 import { ProductCategoryRow } from "./components/products/productCategoryRow";
 import { Input } from "./components/forms/Input";
@@ -41,6 +41,10 @@ function App() {
 
     return true;
   });
+
+  useEffect(() => {
+    document.title = `Produits visibles: ${visibleProducts.length}`;
+  }, [visibleProducts]);
 
   return (
     <div className="container">

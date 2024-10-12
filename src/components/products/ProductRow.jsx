@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 /**
  *
  * @param {{name: string, stocked: boolean, price: string}} product product information
@@ -17,9 +17,9 @@ export function ProductRow({ product }) {
 }
 
 ProductRow.propTypes = {
-  product: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    stocked: PropTypes.bool.isRequired,
-    price: PropTypes.string.isRequired,
+  product: propTypes.shape({
+    name: propTypes.string.isRequired,
+    stocked: propTypes.bool.isRequired,
+    price: propTypes.string.isRequired,
   }).isRequired,
 };
